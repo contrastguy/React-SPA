@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import {BrowserRouter} from "react-router-dom"
+import Roteador from './Roteador';
 import reportWebVitals from './reportWebVitals';
+import "./index.css"
+import NavBar from './Components/NavBar/NavBar';
+
+//importando o React-Bootstrap
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <NavBar/>
+      <Roteador/>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

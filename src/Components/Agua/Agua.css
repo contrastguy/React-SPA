@@ -1,0 +1,15 @@
+.agua{
+    height: 100px;
+    width: 100px;
+}
+
+/* pegamos a propriedade data-temperatura , pra colocar  as devidas cores , conforme os "states" variam quando apertamos os botões */
+.agua[data-temperatura="0"]{
+    background-color: blue;
+}
+.agua[data-temperatura="50"]{
+    background-color: rgb(5, 220, 249);
+}
+.agua[data-temperatura="100"]{
+    background-color: rgb(255, 0, 0);
+}
