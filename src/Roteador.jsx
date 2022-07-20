@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Agua from "./Components/Agua/Agua";
+import EstadosAgua from "./Components/Agua/EstadosAgua"
 import Todo from "./Components/Todo/FunctionalApp";
 import TrocaTema from "./Components/TrocaTema/TrocaTema";
 import { TemaProvider } from "./Components/TrocaTema/TemaContext";
@@ -8,15 +9,16 @@ import { TemaProvider } from "./Components/TrocaTema/TemaContext";
 
 
 const Roteador = () => {
-   <Routes>
-      <Route path="/agua" element={<Agua />} />
+   return (<Routes>
+      <Route path="/agua" element={<EstadosAgua/>} />
       <Route path="/todo" element={<Todo />} />
-      <Route path="/trocatema"
+      <Route path="/troca-tema"
          element={
             <TemaProvider>
                <TrocaTema />
             </TemaProvider>} />
-   </Routes>
+   </Routes>)
+
 }
 
 
